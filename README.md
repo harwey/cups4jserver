@@ -52,7 +52,7 @@ Cups4J Server will go through the following steps:
 - send a JMS message to the print job queue to signal a new print job
 - message receiver will fetch this print job from the database and print it via Cups4J on the printer "PDF". 
   Dependent on if printing to CUPS succeeds the print job in database will be updated with status spooled, error or recoverable_error. 
-- every 30sec. the print job maintenance will start and check the print job database 
+- every 30 seconds the print job maintenance will start and check the print job database 
   - check all jobs that are "spooled" and update status in database as long as job state is NOT completed
   - completed jobs are removed from database
   - try to reprint jobs with recoverable errors (connection errors while trying to print to CUPS server and similar errors) 
