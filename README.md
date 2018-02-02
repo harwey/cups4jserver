@@ -32,14 +32,14 @@ or Windows:
   standalone.bat -c standalone-full.xml
 ```
 
-Deploy the application to Wildfly:
-==================================
+Deploy the application to Wildfly
+=================================
 Change to cups4jserver directory and run:
 ```
 mvn clean install wildfly:deploy 
 ```
-Test your installation:
-=======================
+Test your installation
+======================
 Try to print a PDF or Postscript file run
 ```
 java -jar client/target/server-client-1.0.0-SNAPSHOT.one-jar.jar
@@ -62,8 +62,8 @@ Cups4J Server will go through the following steps:
   - try to reprint jobs with recoverable errors (connection errors while trying to print to CUPS server and similar errors) 
 - if the database table of print jobs is empty every printed job has completed
 
-Conclusion:
-===========
+Conclusion
+==========
 The current implementation is a quick shot that shows how such kind of print server could work. 
 There is in general no need to use JMS in a print server like this, but it can be of good use in complex situations with more servers or a dedicated print server. At least it is impressive to see how easy it is today to make use of messaging without the need to change a single configuration file or deployment descriptor. 
 
