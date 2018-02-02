@@ -39,10 +39,12 @@ mvn clean install wildfly:deploy
 Test your installation:
 =======================
 Try to print a PDF or Postscript file
+
 run java -jar client/target/server-client-1.0.0-SNAPSHOT.one-jar.jar to get help on command line parameters possible.
 
 
 For a quick print on localhost running Wildfly and CUPS with a Printer named "PDF" you can try to print the test pdf file this way:
+
 java -jar client/target/server-client-1.0.0-SNAPSHOT.one-jar.jar -w localhost -h localhost -P PDF -f client/pdf.pdf
 
 Cups4J Server will go through the following steps:
