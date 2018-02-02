@@ -16,8 +16,10 @@ Get ready to run
 ================
 
 First run Wildfly 11 with full profile. This is necessary in order to be able to use message driven beans.
-set **WILDFLY_HOME** to {your installation directory}/wildfly-11.0.0.Final
-set **AVA_HOME** to your Java 8 or later installation (JDK)
+
+set **WILDFLY_HOME** to ```{your installation directory}/wildfly-11.0.0.Final```
+
+set **JAVA_HOME** to your Java 8 or later installation (JDK)
 
 Change to ```{your installation directory}/wildfly-11.0.0.Final/bin``` and run from there:
 
