@@ -20,15 +20,20 @@ set WILDFLY_HOME to {your installation directory}/wildfly-11.0.0.Final
 set JAVA_HOME to your Java 8 or later installation (JDK)
 
 Change to {your installation directory}/wildfly-11.0.0.Final/bin and run from there:
-on UNIX/Linux
-./standalone.sh -c standalone-full.xml
-or Windows
-standalone.bat -c standalone-full.xml
+
+on UNIX/Linux:
+
+  ./standalone.sh -c standalone-full.xml
+
+or Windows:
+
+  standalone.bat -c standalone-full.xml
 
 
 Deploy the application to Wildfly:
 ==================================
-change to cups4jserver directory and run
+Change to cups4jserver directory and run:
+
 mvn clean install wildfly:deploy 
 
 Test your installation:
