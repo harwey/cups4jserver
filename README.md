@@ -16,19 +16,19 @@ Get ready to run
 ================
 
 First run Wildfly 11 with full profile. This is necessary in order to be able to use message driven beans.
-set WILDFLY_HOME to {your installation directory}/wildfly-11.0.0.Final
-set JAVA_HOME to your Java 8 or later installation (JDK)
+set **WILDFLY_HOME** to {your installation directory}/wildfly-11.0.0.Final
+set **AVA_HOME** to your Java 8 or later installation (JDK)
 
-Change to {your installation directory}/wildfly-11.0.0.Final/bin and run from there:
+Change to ```{your installation directory}/wildfly-11.0.0.Final/bin``` and run from there:
 
 on UNIX/Linux:
-
+```
   ./standalone.sh -c standalone-full.xml
-
+```
 or Windows:
-
+```
   standalone.bat -c standalone-full.xml
-
+```
 
 Deploy the application to Wildfly:
 ==================================
@@ -38,9 +38,11 @@ mvn clean install wildfly:deploy
 
 Test your installation:
 =======================
-Try to print a PDF or Postscript file
-
-run java -jar client/target/server-client-1.0.0-SNAPSHOT.one-jar.jar to get help on command line parameters possible.
+Try to print a PDF or Postscript file run
+```
+java -jar client/target/server-client-1.0.0-SNAPSHOT.one-jar.jar
+```
+to get help on command line parameters possible.
 
 
 For a quick print on localhost running Wildfly and CUPS with a Printer named "PDF" you can try to print the test pdf file this way:
