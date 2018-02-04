@@ -115,8 +115,8 @@ public class PrintService implements IPrintServiceRemote, IPrintServiceLocal {
     if (printJob != null) {
       PrintStateEnum jobState = em.find(PrintJobEt.class, jobId).getPrintState();
       response.setJobState(jobState);
-    }else{
-      response.setMessage("print job with id "+jobId+ " not found.");
+    } else {
+      response.setMessage("print job with id " + jobId + " not found.");
     }
 
     return response;
@@ -133,8 +133,4 @@ public class PrintService implements IPrintServiceRemote, IPrintServiceLocal {
     context.createProducer().send(queue, message);
   }
 
-  @Override
-  public String test() {
-    return "result";
-  }
 }

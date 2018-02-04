@@ -23,5 +23,4 @@ import javax.jws.WebService;
 @Remote
 @WebService
 public interface IPrintServiceRemote extends IPrintService{
-  String test();
 }
