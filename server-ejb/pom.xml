@@ -62,7 +62,7 @@
     <dependency>
       <groupId>org.cups4j</groupId>
       <artifactId>cups4j</artifactId>
-      <version>0.7.3</version>
+      <version>0.7.4</version>
     </dependency>
   </dependencies>
 
