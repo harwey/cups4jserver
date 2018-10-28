@@ -53,7 +53,7 @@ java -jar client/target/server-client-1.0.0-SNAPSHOT.one-jar.jar -w localhost -h
 ```
 Cups4J Server will go through the following steps:
 - persist the print job in database and return the primary key as jobID to the client
-- send a JMS message to the print job queue to signal a new print job
+- send a JMS message to the print job queue to signal the existence of a new print job
 - message receiver will fetch this print job from the database and print it via Cups4J on the printer "PDF". 
   Dependent on if printing to CUPS succeeds the print job in database will be updated with status spooled, error or recoverable_error. 
 - every 30 seconds the print job maintenance will start and check the print job database 
