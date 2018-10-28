@@ -55,7 +55,7 @@ Cups4J Server will go through the following steps:
 - persist the print job in database and return the primary key as jobID to the client
 - send a JMS message to the print job queue to signal the existence of a new print job
 - message receiver will fetch this print job from the database and print it via Cups4J on the printer "PDF". 
-  Dependent on if printing to CUPS succeeds the print job in database will be updated with status spooled, error or recoverable_error. 
+  Dependent on print success the print job in the database will be updated with status spooled, error or recoverable_error. 
 - every 30 seconds the print job maintenance will start and check the print job database 
   - check all jobs that are "spooled" and update status in database as long as job state is NOT completed
   - completed jobs are removed from database
@@ -64,8 +64,8 @@ Cups4J Server will go through the following steps:
 
 Conclusion
 ==========
-The current implementation is a quick shot that shows how such kind of print server could work. 
-There is in general no need to use JMS in a print server like this, but it can be of good use in complex situations with more servers or a dedicated print server. At least it is impressive to see how easy it is today to make use of messaging without the need to change a single configuration file or deployment descriptor. 
+The current implementation is a quick shot that shows how a smart print server could work. 
+There is in general no need to use JMS in a print server like this, but it can be of good use in complex situations with more wildfly servers or a dedicated print server. At least it is impressive to see how easy it is today to make use of messaging without the need to change a single configuration file or deployment descriptor. 
 
 Anyway, at this time this is demonstration code not intended to be used in production environments.
 
